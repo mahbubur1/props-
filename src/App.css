@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.Hafejs-Container{
+  background-color: #61dafb;
+  padding: 10px;
+  border: 2px solid goldenrod;
+  border-radius: 20px;
+  margin: 20px;
+}
