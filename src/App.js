@@ -1,39 +1,29 @@
 
+import { useState } from 'react';
 import './App.css';
 
 function App() {
   return (
     <div className='App'>
-      <Header></Header>
-      {
-        hafejs.map(hafej =>
-        <Hafejs name={hafej.name} fareg={hafej.fareg}></Hafejs>)
-      }
+     <Count></Count>
     </div>
   );
 }
-const hafejs = [
-  {name:"H.M Mojibor Rahman",fareg:"30 years ago"},
-  {name:"H.M Mahbub",fareg:"10 years ago"},
-  {name:"H.M Mokhlis",fareg:"4 years ago"},
-  {name:"H.M Mahdi",fareg:"3 years ago"},
-  {name:"H.M Mosfik",fareg:"Running"},
-  {name:"H.Ms Mahbuba",fareg:"Running after 1 month insallah!"}
-];
 
-  function Header (){
-    return (
-  <h1> All Hafeje Quran </h1>
-    )
-  }
 
-function Hafejs (props) {
-  return (
-   <div className='Hafejs-Container'>
-  <h3>{props.name}</h3>
-  <p>{props.fareg}</p>
+function Count (){
+  const [count,setCount] = useState(100);
+
+  const increaseCount = () => setCount(count +1);
+  const decreaseCount = () => setCount(count -1);
+return( <div>
+    <h1>Assalamo alaikom</h1>
+    <h3>Count: {count}</h3>
+    <button onClick={increaseCount}>Increase</button>
+    <button onClick={decreaseCount}>Decrease</button>
   </div>
-  )
-};
+)
+}
+
 
 export default App;
